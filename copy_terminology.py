@@ -51,8 +51,7 @@ def copy_terminology(connection, tenant_config,secret_value):
 def generate_random_token(length=32):
     # Define characters to use for token generation
     characters = string.ascii_letters + string.digits
-    secret_value = ''.join(secrets.choice(characters) for _ in range(length))
-    return secret_value
+    return ''.join(secrets.choice(characters) for _ in range(length))
 
 def update_tenant_db():
     try:
